@@ -68,7 +68,7 @@ pipeline {
                 script{echo 'deploying the application'
                 withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                     sh "echo ${PASSWORD} | docker login -u ${USERNAME} --password-stdin"
-                    sh "docker push 20it057/dev-final:${IMAGE_NAME}"
+                    sh "docker push 20it055/exam_repo_docker:${IMAGE_NAME}"
                 }}
                 
              }
